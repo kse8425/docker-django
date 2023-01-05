@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Orbis Fabrica</h1>
+<h5><a href="{% url 'website:person' %}">추가 하기</a></h5>
+{% for member in members %}
+    <div style="margin-bottom: 1rem;">
+        <div>이름 : {{ member.name }}</div>
+        <div> 좋아하는 과일: {{ member.like }}</div>
+    </div>
+
+{% endfor %}
+</body>
+</html>
